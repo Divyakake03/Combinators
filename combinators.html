@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Combinators Example</title>
+  <style>
+    /* ----------------------------
+       DESCENDANT COMBINATOR (space)
+       Applies to all <p> inside .descendant
+    ----------------------------- */
+    .descendant p {
+      background-color: #d0f0ff;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    /* ----------------------------
+       CHILD COMBINATOR (>)
+       Applies only to direct child <p> of .child
+    ----------------------------- */
+    .child > p {
+      background-color: #ffe4b5;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    /* ----------------------------
+       ADJACENT SIBLING COMBINATOR (+)
+       Applies to the <p> immediately after any <h2>
+    ----------------------------- */
+    h2 + p {
+      background-color: #c1ffc1;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    /* ----------------------------
+       GENERAL SIBLING COMBINATOR (~)
+       Applies to all <p> that follow an <h3> inside .general
+    ----------------------------- */
+    .general h3 ~ p {
+      background-color: #fcd5ce;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Descendant combinator example -->
+  <div class="descendant">
+    <h1>Descendant Example</h1>
+    <div>
+      <p>This paragraph is styled because it is inside .descendant.</p>
+    </div>
+  </div>
+
+  <!-- Child combinator example -->
+  <div class="child">
+    <h1>Child Example</h1>
+    <p>This paragraph is styled because it is a direct child of .child.</p>
+    <div>
+      <p>This paragraph is NOT styled because it is nested deeper.</p>
+    </div>
+  </div>
+
+  <!-- Adjacent sibling combinator example -->
+  <div class="adjacent">
+    <h2>Adjacent Sibling Example</h2>
+    <p>This paragraph is styled because it comes right after h2.</p>
+    <p>This one is NOT styled because it's not immediately after h2.</p>
+  </div>
+
+  <!-- General sibling combinator example -->
+  <div class="general">
+    <h3>General Sibling Example</h3>
+    <p>This paragraph is styled because it follows h3.</p>
+    <p>This one too — all p after h3 are styled.</p>
+  </div>
+
+</body>
+</html>
