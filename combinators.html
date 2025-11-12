@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+        /* child p{
+            background-color: blueviolet;
+            
+        } */
+        /* .subchild h1{
+            color:brown
+        } */
+
+        h1+p{
+            background-color: aqua;
+        }
+        /* h2~p{
+            background-color: bisque;
+        } */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h1>Parent</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vero consectetur ducimus facilis illum quo! Delectus sit laudantium nisi natus reiciendis amet, sunt in sapiente tempore quis, ratione distinctio dolorum!</p>
+        <div class="child">
+            <h1>child</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia quia doloribus dolorum ipsam in ut vitae nemo, ab ullam praesentium cumque quos repellendus autem quidem saepe! Pariatur amet quae quasi!</p>
+            <div class="subchild">
+                <h1>sub child</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magnam sapiente vero! Dignissimos accusantium architecto nam nobis, quas velit, ipsum facere officiis porro quaerat beatae, adipisci sed unde reiciendis doloribus.
+                </p>
+                <div class="greatchild"><h1>greatchild</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga nobis dolore. Tenetur, rem fuga. Adipisci amet perferendis dolores recusandae odit sunt facilis harum minima, est velit voluptates voluptatum a!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
